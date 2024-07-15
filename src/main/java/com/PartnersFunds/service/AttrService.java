@@ -2,14 +2,15 @@ package com.PartnersFunds.service;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
-import com.PartnersFunds.Entities.AttrEntity;
+import com.PartnersFunds.Entities.pageAttrPropertiesEntity;
+import com.PartnersFunds.Entities.pageAttributesEntity;
+import com.PartnersFunds.Entities.pagesEntity;;
 
 @Service
 public interface AttrService {
 
-	public List<AttrEntity> getAttrDetails();
-	public String saveData(AttrEntity data);
-	public List<AttrEntity> searchByType(String type);
+	public List<pagesEntity> getPages();
+	public List<pageAttributesEntity> getPageAttributes();
+	public List<pageAttrPropertiesEntity> getPageProperties();
 }

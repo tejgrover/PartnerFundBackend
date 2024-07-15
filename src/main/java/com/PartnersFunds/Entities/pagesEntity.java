@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="xxpf_pages")
-public class pages {
+public class pagesEntity {
 
 	@Id
 	@Column(name = "page_id")
@@ -18,11 +18,14 @@ public class pages {
 	@Column(name = "page_name")
 	private String page_name;
 	
-	@Column(name = "title_bar")
-	private String title_bar;
+	@Column(name = "page_file_name")
+	private String page_file_name;
 	
-	@Column(name = "description")
-	private String description;
+	@Column(name = "page_title")
+	private String page_title;
+	
+	@Column(name = "parent_page_id")
+	private Integer parent_page_id;
 	
 	@Column(name = "created_by")
 	private  String created_by;
@@ -33,25 +36,27 @@ public class pages {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public pages() {
+	public pagesEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public pages(Integer page_id, String page_name, String title_bar, String description, String created_by,
-			Date creation_date, String last_updated_by, Date last_updated_date) {
+	public pagesEntity(Integer page_id, String page_name, String page_file_name, String page_title,
+			Integer parent_page_id, String created_by, Date creation_date, String last_updated_by,
+			Date last_update_date) {
 		super();
 		this.page_id = page_id;
 		this.page_name = page_name;
-		this.title_bar = title_bar;
-		this.description = description;
+		this.page_file_name = page_file_name;
+		this.page_title = page_title;
+		this.parent_page_id = parent_page_id;
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public Integer getPage_id() {
@@ -70,20 +75,28 @@ public class pages {
 		this.page_name = page_name;
 	}
 
-	public String getTitle_bar() {
-		return title_bar;
+	public String getPage_file_name() {
+		return page_file_name;
 	}
 
-	public void setTitle_bar(String title_bar) {
-		this.title_bar = title_bar;
+	public void setPage_file_name(String page_file_name) {
+		this.page_file_name = page_file_name;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getPage_title() {
+		return page_title;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setPage_title(String page_title) {
+		this.page_title = page_title;
+	}
+
+	public Integer getParent_page_id() {
+		return parent_page_id;
+	}
+
+	public void setParent_page_id(Integer parent_page_id) {
+		this.parent_page_id = parent_page_id;
 	}
 
 	public String getCreated_by() {
@@ -110,13 +123,12 @@ public class pages {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_update_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
-	
 	
 }

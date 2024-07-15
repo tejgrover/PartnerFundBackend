@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="xxpf_page_attr_prop_conditions")
-public class pageAttrPropConditions {
+public class pageAttrPropConditionsEntity {
 
 	@Id
 	@Column(name="condition_id")
@@ -45,18 +45,18 @@ public class pageAttrPropConditions {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public pageAttrPropConditions() {
+	public pageAttrPropConditionsEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public pageAttrPropConditions(Integer condition_id, Integer property_id, Integer condition_sequence,
+	public pageAttrPropConditionsEntity(Integer condition_id, Integer property_id, Integer condition_sequence,
 			String condition_attribute_name, String condition_operator, String low_value, String high_value,
 			String parent_condition_operator, String created_by, Date creation_date, String last_updated_by,
-			Date last_updated_date) {
+			Date last_update_date) {
 		super();
 		this.condition_id = condition_id;
 		this.property_id = property_id;
@@ -69,7 +69,7 @@ public class pageAttrPropConditions {
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public Integer getCondition_id() {
@@ -160,12 +160,12 @@ public class pageAttrPropConditions {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_updated_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
 	
 	
