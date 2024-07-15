@@ -41,6 +41,12 @@ public class AttrController {
 //	            return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
 //	        }
 //	    }
+//	
+//	
+//	@GetMapping("/getAttribute")
+//	public List<AttrEntity> getData() {
+//	   return ser.getAttrDetails();
+//	}
 	
 	@GetMapping("/getPages")
 	public List<pagesEntity> getData1() {
@@ -56,5 +62,7 @@ public class AttrController {
 	public List<pageAttrPropertiesEntity> getData3() {
 	   return ser.getPageProperties();
 	}
+	
+	
 
 }
