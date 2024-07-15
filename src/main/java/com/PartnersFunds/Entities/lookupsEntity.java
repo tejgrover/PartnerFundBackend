@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="lookups")
-public class lookups {
+public class lookupsEntity {
 
 	@Id
 	@Column(name="lookup_type")
@@ -33,16 +33,16 @@ public class lookups {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public lookups() {
+	public lookupsEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public lookups(String lookup_type, String lookup_code, String meaning, String enabled_flag, String created_by,
-			Date creation_date, String last_updated_by, Date last_updated_date) {
+	public lookupsEntity(String lookup_type, String lookup_code, String meaning, String enabled_flag, String created_by,
+			Date creation_date, String last_updated_by, Date last_update_date) {
 		super();
 		this.lookup_type = lookup_type;
 		this.lookup_code = lookup_code;
@@ -51,7 +51,7 @@ public class lookups {
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public String getLookup_type() {
@@ -110,12 +110,12 @@ public class lookups {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_updated_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
 	
 	

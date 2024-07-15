@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="XXPF_PAGE_PARAMETERS")
-public class pageParameters {
+public class pageParametersEntity {
 
 	@Id
 	@Column(name = "parameter_id")
@@ -25,12 +25,12 @@ public class pageParameters {
 	@Column(name="default_value")
 	private String default_value;
 
-	public pageParameters() {
+	public pageParametersEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public pageParameters(Integer parameter_id, Integer page_id, String parameter_name, String attribute_name,
+	public pageParametersEntity(Integer parameter_id, Integer page_id, String parameter_name, String attribute_name,
 			String default_value) {
 		super();
 		this.parameter_id = parameter_id;

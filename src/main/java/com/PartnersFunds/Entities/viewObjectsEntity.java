@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="view_objects")
-public class viewObjects {
+public class viewObjectsEntity {
 
 	@Id
 	@Column(name="view_object_id")
@@ -33,16 +33,16 @@ public class viewObjects {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public viewObjects() {
+	public viewObjectsEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public viewObjects(Integer view_object_id, String view_object_name, String view_object_sql_query, String event_type,
-			String created_by, Date creation_date, String last_updated_by, Date last_updated_date) {
+	public viewObjectsEntity(Integer view_object_id, String view_object_name, String view_object_sql_query, String event_type,
+			String created_by, Date creation_date, String last_updated_by, Date last_update_date) {
 		super();
 		this.view_object_id = view_object_id;
 		this.view_object_name = view_object_name;
@@ -51,7 +51,7 @@ public class viewObjects {
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public Integer getView_object_id() {
@@ -110,12 +110,12 @@ public class viewObjects {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_updated_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
 	
 }

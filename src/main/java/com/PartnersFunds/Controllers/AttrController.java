@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+<<<<<<< Updated upstream
+=======
+
+import com.PartnersFunds.Entities.pageAttrPropertiesEntity;
+import com.PartnersFunds.Entities.pageAttributesEntity;
+import com.PartnersFunds.Entities.pagesEntity;
+>>>>>>> Stashed changes
 import com.PartnersFunds.service.AttrServiceImpl;
 
 @RestController
@@ -37,11 +44,29 @@ public class AttrController {
 //	            return new ResponseEntity<>("An error occurred", HttpStatus.INTERNAL_SERVER_ERROR);
 //	        }
 //	    }
+<<<<<<< Updated upstream
 //	
 //	
 //	@GetMapping("/getAttribute")
 //	public List<AttrEntity> getData() {
 //	   return ser.getAttrDetails();
 //	}
+=======
+	
+	@GetMapping("/getPages")
+	public List<pagesEntity> getData1() {
+	   return ser.getPages();
+	}
+	
+	@GetMapping("/getPageAttributes")
+	public List<pageAttributesEntity> getData2() {
+	   return ser.getPageAttributes();
+	}
+	
+	@GetMapping("/getPageProperties")
+	public List<pageAttrPropertiesEntity> getData3() {
+	   return ser.getPageProperties();
+	}
+>>>>>>> Stashed changes
 
 }

@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="eo_vo_page_relationships")
-public class eovoPageRelationships {
+public class eovoPageRelationshipsEntity {
 
 	@Id
 	@Column(name="relationship_id")
@@ -33,16 +33,16 @@ public class eovoPageRelationships {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public eovoPageRelationships() {
+	public eovoPageRelationshipsEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public eovoPageRelationships(Integer relationship_id, String object_type, Integer object_id, Integer page_id,
-			String created_by, Date creation_date, String last_updated_by, Date last_updated_date) {
+	public eovoPageRelationshipsEntity(Integer relationship_id, String object_type, Integer object_id, Integer page_id,
+			String created_by, Date creation_date, String last_updated_by, Date last_update_date) {
 		super();
 		this.relationship_id = relationship_id;
 		this.object_type = object_type;
@@ -51,7 +51,7 @@ public class eovoPageRelationships {
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public Integer getRelationship_id() {
@@ -110,12 +110,12 @@ public class eovoPageRelationships {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_updated_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
 	
 }

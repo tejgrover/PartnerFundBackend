@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="xxpf_page_attr_properties")
-public class pageAttrProperties {
+public class pageAttrPropertiesEntity {
 
 	@Id
 	@Column(name = "property_id")
@@ -39,17 +39,17 @@ public class pageAttrProperties {
 	@Column(name = "last_updated_by")
 	private String last_updated_by;
 	
-	@Column(name = "last_updated_date")
-	private Date last_updated_date;
+	@Column(name = "last_update_date")
+	private Date last_update_date;
 
-	public pageAttrProperties() {
+	public pageAttrPropertiesEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public pageAttrProperties(Integer property_id, Integer attribute_id, String property_name, String property_tag,
+	public pageAttrPropertiesEntity(Integer property_id, Integer attribute_id, String property_name, String property_tag,
 			String property_value, String property_type, String created_by, Date creation_date, String last_updated_by,
-			Date last_updated_date) {
+			Date last_update_date) {
 		super();
 		this.property_id = property_id;
 		this.attribute_id = attribute_id;
@@ -60,7 +60,7 @@ public class pageAttrProperties {
 		this.created_by = created_by;
 		this.creation_date = creation_date;
 		this.last_updated_by = last_updated_by;
-		this.last_updated_date = last_updated_date;
+		this.last_update_date = last_update_date;
 	}
 
 	public Integer getProperty_id() {
@@ -135,12 +135,12 @@ public class pageAttrProperties {
 		this.last_updated_by = last_updated_by;
 	}
 
-	public Date getLast_updated_date() {
-		return last_updated_date;
+	public Date getLast_update_date() {
+		return last_update_date;
 	}
 
-	public void setLast_updated_date(Date last_updated_date) {
-		this.last_updated_date = last_updated_date;
+	public void setLast_updated_date(Date last_update_date) {
+		this.last_update_date = last_update_date;
 	}
 	
 	
