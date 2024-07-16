@@ -55,13 +55,17 @@ public class PageDetailsServiceImpl implements  PageDetailsService{
 	}
 
 	@Override
-	public String savePageAttributePropertiesDetails(pageAttrPropertiesEntity pageAttrProperties) {
+	public String savePageAttributePropertiesDetails(List<pageAttrPropertiesEntity> pageAttrPropertiesList) {
+
+
 	try {
+	for (pageAttrPropertiesEntity pageAttrProperties : pageAttrPropertiesList) {
 	pageAttrPropertiesRepo.save(pageAttrProperties);
-	} catch(Exception e) {
-	return "Error: " + e;
 	}
-	return null;
+	} catch (Exception e) {
+	return "Error: " + e.getMessage();
+	}
+	return "Success";
 	}
 
 	

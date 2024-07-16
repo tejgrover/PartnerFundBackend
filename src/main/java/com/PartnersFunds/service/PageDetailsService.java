@@ -14,5 +14,5 @@ public interface PageDetailsService {
 	public List<Object[]> getAllDetails();
 	public String savePageAttributeDetails(pageAttributesEntity pageAttribute);
 	public String savePageDetails(pagesEntity page);
-	public String savePageAttributePropertiesDetails(pageAttrPropertiesEntity pageAttrProperties);
+	public String savePageAttributePropertiesDetails(List<pageAttrPropertiesEntity> pageAttrPropertiesList);
 }

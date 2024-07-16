@@ -40,8 +40,8 @@ public class PageDetailsController {
 	}
 
 	@PostMapping("/addPageAttrProperties")
-	public String addPage(@RequestBody pageAttrPropertiesEntity pageAttrProperties) {
-	pageService.savePageAttributePropertiesDetails(pageAttrProperties);
+	public String addPage(@RequestBody List<pageAttrPropertiesEntity> pageAttrPropertiesList) {
+	pageService.savePageAttributePropertiesDetails(pageAttrPropertiesList);
 	return "Added Page Attribute properties details successfully";
 	}
 
