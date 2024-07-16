@@ -20,7 +20,7 @@ public class pageAttributesEntity {
 	private Integer page_id;
 	
 	@Column(name="attribute_name")
-	private String attribuute_name;
+	private String attribute_name;
 	
 	@Column(name="attribute_type")
 	private String attribute_type;
@@ -42,12 +42,12 @@ public class pageAttributesEntity {
 		// TODO Auto-generated constructor stub
 	}
 
-	public pageAttributesEntity(Integer attribute_id, Integer page_id, String attribuute_name, String attribute_type,
+	public pageAttributesEntity(Integer attribute_id, Integer page_id, String attribute_name, String attribute_type,
 			String created_by, Date creation_date, String last_updated_by, Date last_update_date) {
 		super();
 		this.attribute_id = attribute_id;
 		this.page_id = page_id;
-		this.attribuute_name = attribuute_name;
+		this.attribute_name = attribute_name;
 		this.attribute_type = attribute_type;
 		this.created_by = created_by;
 		this.creation_date = creation_date;
@@ -71,12 +71,12 @@ public class pageAttributesEntity {
 		this.page_id = page_id;
 	}
 
-	public String getAttribuute_name() {
-		return attribuute_name;
+	public String getAttribute_name() {
+		return attribute_name;
 	}
 
-	public void setAttribuute_name(String attribuute_name) {
-		this.attribuute_name = attribuute_name;
+	public void setAttribute_name(String attribute_name) {
+		this.attribute_name = attribute_name;
 	}
 
 	public String getAttribute_type() {
