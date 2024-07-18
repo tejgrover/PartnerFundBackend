@@ -28,9 +28,8 @@ public class PageDetailsController {
 	}
 	
 	@PostMapping("/addPage")
-	public String addPage(@RequestBody pagesEntity page) {
-	pageService.savePageDetails(page);
-	return "Added Page details successfully";
+	public pagesEntity addPage(@RequestBody pagesEntity page) {	
+		return pageService.savePageDetails(page);
 	}
 
 	@PostMapping("/addPageProperties")
