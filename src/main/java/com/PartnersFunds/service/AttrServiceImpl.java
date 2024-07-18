@@ -1,6 +1,8 @@
 package com.PartnersFunds.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -78,6 +80,17 @@ public class AttrServiceImpl implements AttrService{
 			System.out.println("Exception Error "+e);
 		}
 		return null;
+		
+	}
+
+	@Override
+	public List<pagesEntity> getPageById(int page_id) {
+		try {
+			return Pagerepo.findByPage_id(page_id);
+			
+		}catch(Exception e) {
+			return null;
+		}
 		
 	}
 	

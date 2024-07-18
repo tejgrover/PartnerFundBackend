@@ -65,6 +65,9 @@ public class AttrController {
 	   return ser.getPageProperties();
 	}
 	
-	
+	@GetMapping("/getPageById/{pageId}")
+	public List<pagesEntity> getById(@PathVariable("pageId") int pageId){
+		return ser.getPageById(pageId);
+	}
 
 }

@@ -11,6 +11,7 @@ import com.PartnersFunds.Entities.pagesEntity;
 import com.PartnersFunds.Repo.PageDetailsRepo;
 import com.PartnersFunds.Repo.pageAttrPropertiesRepo;
 import com.PartnersFunds.Repo.pageAttributesRepo;
+import com.PartnersFunds.Repo.pagesRepo;
 
 @Service
 public class PageDetailsServiceImpl implements  PageDetailsService{
@@ -24,6 +25,9 @@ public class PageDetailsServiceImpl implements  PageDetailsService{
 	
 	@Autowired
 	pageAttrPropertiesRepo pageAttrPropertiesRepo;
+	
+	@Autowired
+	pagesRepo pagesRepo;
 	
 	@Override
 	public List<Object[]> getAllDetails() {
