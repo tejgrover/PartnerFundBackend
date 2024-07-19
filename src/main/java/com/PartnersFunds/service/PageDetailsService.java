@@ -13,6 +13,6 @@ public interface PageDetailsService {
 	
 	public List<Object[]> getAllDetails();
 	public String savePageAttributeDetails(pageAttributesEntity pageAttribute);
-	public pagesEntity savePageDetails(pagesEntity page);
+	public Integer savePageDetails(pagesEntity page);
 	public String savePageAttributePropertiesDetails(List<pageAttrPropertiesEntity> pageAttrPropertiesList);
 }

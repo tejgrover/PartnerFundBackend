@@ -36,10 +36,12 @@ public class PageDetailsServiceImpl implements  PageDetailsService{
 	}
 
 	@Override
-	public pagesEntity savePageDetails(pagesEntity page) {
+	public Integer savePageDetails(pagesEntity page) {
 		 try {
 	            pagesEntity savedData = pageRepo.save(page);
-	            return savedData;
+	            System.out.println(savedData.getPage_id());
+//	            return savedData;
+	            return savedData.getPage_id();
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	            return null;
