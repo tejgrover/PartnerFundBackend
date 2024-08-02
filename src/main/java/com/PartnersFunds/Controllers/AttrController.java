@@ -26,9 +26,7 @@ public class AttrController {
 	
 	@Autowired
 	private AttrServiceImpl ser;
-	
-	
-	
+
 //	@GetMapping("/getByType/{type}")
 //	public List<AttrEntity> searchAttribute(@PathVariable String type){
 //		return ser.searchByType(type);

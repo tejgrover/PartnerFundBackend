@@ -27,7 +27,6 @@ public class pageParametersEntity {
 
 	public pageParametersEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public pageParametersEntity(Integer parameter_id, Integer page_id, String parameter_name, String attribute_name,

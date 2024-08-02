@@ -46,7 +46,6 @@ public class pagesEntity {
 
 	public pagesEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public pagesEntity(Integer page_id, String page_name, String page_file_name, String page_title,
